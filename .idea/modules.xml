@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../kotlin-doc/kotlin-doc/kotlin-doc.iml" filepath="$PROJECT_DIR$/../kotlin-doc/kotlin-doc/kotlin-doc.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-study.iml" filepath="$PROJECT_DIR$/kotlin-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../scala-study/scala-study.iml" filepath="$PROJECT_DIR$/../scala-study/scala-study.iml" />
     </modules>
   </component>
 </project>
