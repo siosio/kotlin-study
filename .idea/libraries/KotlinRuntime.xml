@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="KotlinRuntime">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/kotlin-runtime.jar!/" />
+      <root url="jar://$USER_HOME$/.IntelliJIdea11/config/plugins/Kotlin/kotlinc/lib/kotlin-runtime.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

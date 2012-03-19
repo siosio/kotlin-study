@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../euler/euler.iml" filepath="$PROJECT_DIR$/../euler/euler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../kotlin/kotlin-db/kotlin-db.iml" filepath="$PROJECT_DIR$/../kotlin/kotlin-db/kotlin-db.iml" />
       <module fileurl="file://$PROJECT_DIR$/../kotlin-doc/kotlin-doc/kotlin-doc.iml" filepath="$PROJECT_DIR$/../kotlin-doc/kotlin-doc/kotlin-doc.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-study.iml" filepath="$PROJECT_DIR$/kotlin-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/../scala-study/scala-study.iml" filepath="$PROJECT_DIR$/../scala-study/scala-study.iml" />
