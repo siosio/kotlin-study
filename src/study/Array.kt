@@ -2,7 +2,8 @@ package printargs
 
 import java.util.ArrayList
 import java.util.Collection
-import std.util.*
+import kotlin.util.arrayList
+import kotlin.util.linkedList
 
 fun main(args : Array<String>) {
 
@@ -93,8 +94,8 @@ fun filterNot() :Unit {
 fun foreach() : Unit {
     println("-------------------- foreach --------------------")
     var arr1 = array(1, 2, 3, 4)
-    arr1.foreach {println(it)}
-    arr1.foreach {}
+    arr1.forEach {println(it)}
+    arr1.forEach {}
 }
 
 fun flatMap() : Unit {
