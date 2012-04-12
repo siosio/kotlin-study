@@ -1,42 +1,56 @@
-package file.test
+package test.file
 
-import file.*
-import junit.framework.TestCase
-import java.io.BufferedWriter
+import java.io.File
 import kotlin.test.assertEquals
+import org.junit.Before
+import org.junit.Test
+import file.*
 
-class FileTest() : TestCase() {
+class FileTest() {
 
-  override fun setUp() {
+  private val testFile:File = File("./temp/testFile.txt")
+
+  Before fun setUp() {
     // Create Test File
-    val testFile : File = File("./temp/testFile.txt")
     testFile.write({
+      it += "line1"
+      it += "line2"
+      it += "line3"
+      it += "line4"
+      it += "line5"
+      it += "line6"
+      it += "line7"
     })
   }
 
-  fun testRead() : Unit {
+  Test fun testRead() : Unit {
     val file : File = File("./temp/testFile.txt")
     var lineNo : Int = 0
-    file.read {
+    file.eachLine() {
       lineNo++
-      assertEquals("line = [${lineNo}]", "line${lineNo}", it)
+      println("it = ${it}")
+      assertEquals("line${lineNo}", it, "line = [${lineNo}]")
+    }
+  }
+
+  fun testReadWithLineNo() : Unit {
+    val file : File = File("./temp/testFile.txt")
+    file.eachLineWithLineNo{lineNo, line ->
+      println("it = ${line}")
+      assertEquals("line${lineNo}", line, "line = [${lineNo}]")
     }
   }
 
   fun testReadAll() : Unit {
     val file : File = File("./temp/testFile.txt")
     val lines = file.readAll()
-    assertEquals(6, lines.size(), "line count")
-    assertEquals("line 1", "line1", lines.get(0))
-    assertEquals("line 2", "line1", lines.get(0))
-    assertEquals("line 3", "line1", lines.get(0))
-    assertEquals("line 4", "line1", lines.get(0))
-    assertEquals("line 5", "line1", lines.get(0))
-    assertEquals("line 6", "line1", lines.get(0))
+    assertEquals(7, lines.size(), "line count")
   }
 
-  fun testName() {
+  fun testReadAllFilter() : Unit {
     val file : File = File("./temp/testFile.txt")
-    assertEquals("testFile.txt", file.name)
+    val lines = file.readAll({it.matches("(.*1|.*7)")})
+    assertEquals(7, lines.size(), "line count")
   }
 }
+
